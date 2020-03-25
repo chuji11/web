@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
     <div>
@@ -23,4 +24,26 @@
         <input type="file">
     </div>
 </body>
+<script>
+    function fn(){
+        console.log('ff')
+        localStorage.setItem('vipList',JSON.stringify([{userId:'0311',vin:'1111'},{userId:'0312',vin:'1234',status:'000'},{userId:'0311',vin:'1161'},{userId:'0312',vin:'1254'},]))
+        var obj = {userId:'0310',vin:'1234',status:'002'}
+        let list = JSON.parse(localStorage.getItem('vipList'))
+        for(let i=0;i<list.length;i++){
+            console.log(list[i])
+            if(obj.vin == list[i].vin){
+                list[i]=obj
+                break
+            }
+
+        }
+        console.log(list)
+        localStorage.setItem('vipList',JSON.stringify(list))
+
+    }
+    
+    fn()
+
+</script>
 </html>
