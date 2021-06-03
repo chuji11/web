@@ -4,15 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .box{
+        width: 200px;
+        background: red;
+        height: 200px;
+      }
+      .child{
+        margin: 0 auto;
+        height: 34px;
+        /* width: 40px; */
+        background:blue;
+      }
+    </style>
   </head>
   <body>
     <input id="file" type="file" name="" id="" />
-    <div>
-      <img class="image" src="" alt="" />
+    <div class="box">
+      <!-- <img class="image" src="" alt="" /> -->
+      <div class="child">水平垂直居中</div>
     </div>
     <script>
       document.getElementById("file").addEventListener("change", function (e) {
         console.log(e);
+        // document.getElementsByClassName("image")[0].setAttribute('srv')
       });
 
       let data = [];
